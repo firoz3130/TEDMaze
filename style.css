@@ -1,0 +1,172 @@
+header {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: #3d4f90;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  
+  body {
+    background: linear-gradient(to bottom right, #f0c27b, #4b1248);
+    animation: color-change 10s infinite;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFA07A;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add additional styles as desired */
+  
+  #start-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #start-btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  @keyframes color-change {
+    0% {
+      background: linear-gradient(to bottom right, #f0c27b, #4b1248);
+    }
+    50% {
+      background: linear-gradient(to bottom right, #355c7d, #6c5b7b, #c06c84);
+    }
+    100% {
+      background: linear-gradient(to bottom right, #f0c27b, #4b1248);
+    }
+  }
+  
+
+  
+/* Style for the cell */
+.cell {
+    width: 20px;
+    height: 20px;
+    border: none;
+  }
+  
+  /* Style for the wall */
+  .wall {
+    background-color: black;
+  }
+  .visited {
+    background-color: #FFA07A;}
+  
+  /* Style for the start cell */
+  .start {
+    background-color: green;
+  }
+  
+  /* Style for the end cell */
+  .end {
+    background-color: red;
+  }
+  #header-title{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    color: aqua;
+  }
+  /* Style for the maze container */
+  #maze {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 60%;   
+    height: 60%;
+    margin: 0 auto;
+    color: black;
+    padding: 50px;
+  }
+  #maze {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 8px solid #333;
+    padding: 70px;
+    color: black;
+  }
+footer{
+  text-align: center;
+  margin:2rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90;
+  padding: 1rem;
+}  
+  
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
